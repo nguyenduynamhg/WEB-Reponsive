@@ -1,0 +1,91 @@
+/* FONT FACE - font-display: fallback; */
+@font-face {
+    font-family: 'pb';
+    src: url('../fonts/ProximaNova-Bold.woff2') format('woff2'),
+        url('../fonts/ProximaNova-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'pe';
+    src: url('../fonts/ProximaNovaA-Extrabld.woff2') format('woff2'),
+        url('../fonts/ProximaNovaA-Extrabld.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'pr';
+    src: url('../fonts/ProximaNova-Regular.woff2') format('woff2'),
+        url('../fonts/ProximaNova-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+/* .container{
+    height: 56px;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+}
+header{
+    background-color: #000 ;
+} */
+
+/*
+@mixin threedot{
+    display: -webkit-box;
+     -webkit-line-clamp: 3;
+     -webkit-box-orient: vertical;
+     overflow: hidden;
+     text-overflow: ellipsis;
+}
+ $fzbody: 18px;
+ @mixin styletext($ff: arial, $fs:$fzbody, $lh: normal, $tt : none, $td: none, $ls: normal , $cl: #000) {
+     font-family:$ff ;
+     font-size: $fs;
+     line-height: $lh;
+     text-transform: $tt;
+     text-decoration: $td;
+     color: $cl;
+     letter-spacing: $ls;
+ }
+
+
+@mixin midflex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin midabs {
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+     position: absolute;
+}
+
+
+ .rec{
+    width:500px;
+    height: 400px;
+    overflow: hidden;
+    border:  3px solid #000;
+}
+.rec img{
+    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+} */
+

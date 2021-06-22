@@ -1,0 +1,108 @@
+
+img {
+    max-width: 100%;
+}
+.btnmain{   
+    border: 1px solid $white-cl;
+    padding: 12px 30px;
+    text-decoration: none;
+    @include text(12px,pb,$lh-text,$white-cl,uppercase);
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    cursor: pointer; 
+    // position: relative;
+    @include transition(0.3s);
+    a{  
+        i{
+        display: block;
+        margin-left: 15px;
+        position: relative;
+        right: 0;
+        @include transition(0.3s);
+        } 
+    }
+    &:hover{
+        background: $yellow-cl;
+        @include transition(0.3s);
+        a{
+            i{
+            margin-left: 22px;
+            right: -10px;
+            @include transition(0.3s);
+                }
+        }
+    }
+    // mobile
+    @include xs{
+        padding: 5px 10px;
+    }
+    @include lg {
+        // CSS responsive large desktop
+    }
+    @include md {
+        // CSS responsive desktop
+    }
+    @include sm {
+        // CSS responsive tablet
+        padding: 10px 15px;
+    }
+    @include xxs {
+        // CSS responsive small mobile
+    }
+
+}
+
+.btnmore{
+    display: inline-flex;
+    @include text(14px,pb,$lh-text,$text-black-cl,uppercase);
+    letter-spacing: 2px;
+    position: relative;
+    text-decoration: none;
+    img{
+        margin-left: 10px;
+    }
+    &:before{
+        content: '';
+        width: 35px;
+        height: 2px;
+        background: $yellow-cl;
+        display: block;
+        position: absolute;
+        bottom: -5px;
+        left: 0px;
+        @include transform(translateX(0px));
+    }
+    img{
+        position: relative;
+        @include transform(translateX(0px));
+        @include transition($t);
+    }
+    &:hover{
+        img{
+            @include transform(translateX(10px));
+            @include transition($t);
+        }
+    }
+
+    //mobie
+    @include xs{
+        font-size: 10px;
+        
+        &:before{
+            display: none;
+        }
+    }
+    @include sm{
+        font-size: 8px;
+        
+        &:before{
+            display: none;
+        }
+    }
+
+   
+}

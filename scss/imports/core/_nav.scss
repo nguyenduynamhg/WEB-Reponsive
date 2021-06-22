@@ -1,0 +1,79 @@
+// css navigator (Menu)
+.nav{   
+    width: 100vw;
+    height: 100vh;
+    background:  $black-cl;
+    position: fixed;
+    top: var(--heightHeader);
+    left: 0;
+    z-index: 200;
+    opacity: 0;
+    pointer-events: none;  
+    @include transition($t);
+    // visibility: hidden;
+    // @include transform(translateX(100%));
+    // @include transition(0.5s $cubic);
+    ul{
+        li{
+            height: 100%;
+            a{
+               
+                @include transition($t);
+                position: relative;
+                transition: 0,5s;
+                &:after{
+                    content: '';
+                    width: 100%;
+                    height: 1px;
+                    background: #fff;
+                    position: absolute;
+                    left: 0;
+                    bottom: 24px;
+                    @include transform(scaleX(0));
+                    @include transform-origin(left center);
+                    @include transition($t $cubic);
+                }
+                &:hover
+                {
+                    color: $yellow-cl;
+                        // @include transition($t);
+                        &:after{
+                            @include transform(scaleX(1));
+                            @include transform-origin(right center);
+                            @include transition($t $cubic);
+                        }  
+                 }
+                 &.active{
+                    color: $yellow-cl;
+                    pointer-events: auto;
+                    transition: 0,5s;
+                 }
+            }
+        }
+    }
+    &.active{
+        // @include transform(translateX(0%));
+        // @include transition(0.5s $cubic);
+        opacity: 0.9;
+        pointer-events: auto;
+        @include transition(0.3s);
+        color: $yellow-cl;
+    }
+    ul{
+        width: 100%;
+        @include mid();
+        text-align: center;
+       
+        li{
+            margin: 15px auto;
+            a{
+                text-decoration: none;
+                padding: 20px;
+                text-align: center;
+                @include text(20px,pb,$lh-text-m,$white-cl,uppercase);
+            }
+        }
+
+    }
+    
+}
